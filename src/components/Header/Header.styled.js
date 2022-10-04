@@ -32,7 +32,7 @@ export const NavigationLink = styles(NavLink)`
   color: black;
   padding: 0.2rem 1rem;
   border-radius: 0.2rem;
-  
+
   &.active {
     background-color: #017BFE;
     color: white;
