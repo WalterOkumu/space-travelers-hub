@@ -16,6 +16,20 @@ export const loadMissions = createAsyncThunk('missions/loadMissions', async () =
   return missions;
 });
 
+const generateObj = (data) => {
+  const myList = [];
+
+  for (let i = 0; i < data.length; i += 1) {
+    myList[i] = {
+      id: data[i].mission_id,
+      mission_name: data[i].mission_name,
+      description: data[i].description,
+      member_status: false,
+    };
+  }
+  return myList;
+};
+
 const missionsSlice = createSlice({
   name: 'missions',
   initialState,
@@ -27,7 +41,7 @@ const missionsSlice = createSlice({
       .addCase(loadMissions.fulfilled, (state, { payload }) => ({
         ...state,
         loading: false,
-        missions: payload,
+        missions: generateObj(payload),
       }));
   },
 });

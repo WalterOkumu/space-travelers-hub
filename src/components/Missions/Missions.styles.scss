@@ -1,0 +1,83 @@
+table {
+  margin-right: 6em;
+  margin-left: 6em;
+  border: 2px solid #ecedee;
+  border-collapse: collapse;
+
+  thead {
+    font-size: 15px;
+    border: 2px solid #ecedee;
+    border-collapse: collapse;
+
+    tr {
+      border: 2px solid #ecedee;
+      border-collapse: collapse;
+
+      .mission-header {
+        width: 15%;
+      }
+
+      .description-header {
+        width: 45%;
+      }
+
+      .status-header {
+        width: 10%;
+      }
+
+      .button-header {
+        width: 10%;
+      }
+    }
+  }
+
+  tbody {
+    font-size: 12px;
+
+    tr,
+    td {
+      border: 2px solid #ecedee;
+      border-collapse: collapse;
+      padding: 5px;
+    }
+
+    .mission-name {
+      font-weight: bold;
+      font-size: 15px;
+    }
+
+    .member-status-active {
+      background-color: green;
+      border-radius: 3px;
+      padding: 1px;
+      color: white;
+      font-size: 11px;
+    }
+
+    .member-status-not-active {
+      background-color: gray;
+      border-radius: 3px;
+      padding: 1px;
+      color: white;
+      font-size: 11px;
+    }
+
+    .mission-button-join {
+      font-size: 11px;
+      background-color: transparent;
+      border: 1px solid green;
+      color: green;
+    }
+
+    .mission-button-leave {
+      font-size: 11px;
+      background-color: transparent;
+      border: 1px solid red;
+      color: red;
+    }
+  }
+
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+}

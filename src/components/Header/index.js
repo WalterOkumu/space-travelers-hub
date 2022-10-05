@@ -14,7 +14,7 @@ const Header = () => (
   <SpaceXHeader>
     <Logo>
       <Image src={SpaceXLogo} />
-      Space Traveler&apos; Hub
+      Space Traveler&apos;s Hub
     </Logo>
     <SpaceXNav>
       <ListContainer>
