@@ -47,19 +47,33 @@ table {
     }
 
     .member-status-active {
+      display: flex;
+      align-self: center;
+      justify-content: center;
       background-color: green;
+      border-radius: 3px;
+      padding: 1px;
+      color: white;
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .member-status-not-active {
+      display: flex;
+      align-self: center;
+      justify-content: center;
+      background-color: gray;
       border-radius: 3px;
       padding: 1px;
       color: white;
       font-size: 11px;
     }
 
-    .member-status-not-active {
-      background-color: gray;
-      border-radius: 3px;
-      padding: 1px;
-      color: white;
-      font-size: 11px;
+    .button-container {
+      display: flex;
+      align-self: center;
+      justify-content: center;
+      width: 100%;
     }
 
     .mission-button-join {

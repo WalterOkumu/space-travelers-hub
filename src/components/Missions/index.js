@@ -1,20 +1,16 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { getAllMissions, loadMissions } from '../../redux/missions';
+import { getAllMissions, loadMissions, toggleMission } from '../../redux/missions';
 import './Missions.styles.scss';
 
 const Missions = () => {
-  const [missions, setMissions] = useState([]);
-
   const dispatch = useDispatch();
 
-  const missionData = useSelector(getAllMissions);
+  const missions = useSelector(getAllMissions);
 
   useEffect(() => {
     dispatch(loadMissions());
-
-    setMissions(missionData);
   }, []);
 
   const renderTableRows = () => (
@@ -29,18 +25,36 @@ const Missions = () => {
               {mission.description}
             </td>
             <td className="member-status">
-              <span className={`member-status-${mission.member_status ? 'active' : 'not-active'} `}>
+              <span className={`member-status-${mission.reserved ? 'active' : 'not-active'} `}>
                 {
-                  mission.member_status ? 'Active Member' : 'Not A Member'
+                  mission.reserved ? 'Active Member' : 'Not A Member'
                 }
               </span>
             </td>
             <td>
-              {
-                mission.member_status
-                  ? <button type="button" className={`mission-button-${mission.member_status ? 'leave' : 'join'} `}>Leave Mission</button>
-                  : <button type="button" className={`mission-button-${mission.member_status ? 'leave' : 'join'} `}>Join Mission</button>
-              }
+              <div className="button-container">
+                {
+                  mission.reserved
+                    ? (
+                      <button
+                        type="button"
+                        className={`mission-button-${mission.reserved ? 'leave' : 'join'} `}
+                        onClick={() => dispatch(toggleMission(mission.id))}
+                      >
+                        Leave Mission
+                      </button>
+                    )
+                    : (
+                      <button
+                        type="button"
+                        className={`mission-button-${mission.reserved ? 'leave' : 'join'} `}
+                        onClick={() => dispatch(toggleMission(mission.id))}
+                      >
+                        Join Mission
+                      </button>
+                    )
+                }
+              </div>
             </td>
           </tr>
         ))

@@ -24,7 +24,7 @@ const generateObj = (data) => {
       id: data[i].mission_id,
       mission_name: data[i].mission_name,
       description: data[i].description,
-      member_status: false,
+      reserved: false,
     };
   }
   return myList;
@@ -33,7 +33,21 @@ const generateObj = (data) => {
 const missionsSlice = createSlice({
   name: 'missions',
   initialState,
-  reducers: {},
+  reducers: {
+    toggleMission: ({ missions }, { payload }) => ({
+      ...missions,
+      missions: missions.map((mission) => {
+        if (mission.id !== payload) {
+          return mission;
+        }
+
+        return {
+          ...mission,
+          reserved: !mission.reserved,
+        };
+      }),
+    }),
+  },
   extraReducers(builder) {
     builder
       .addCase(loadMissions.pending, (state) => ({ ...state, loading: true }))
@@ -48,5 +62,7 @@ const missionsSlice = createSlice({
 
 export const getAllMissions = (state) => state.missions.missions;
 export const getStatus = (state) => state.missions.loading;
+
+export const { toggleMission } = missionsSlice.actions;
 
 export default missionsSlice.reducer;
