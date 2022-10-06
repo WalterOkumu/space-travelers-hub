@@ -8,7 +8,7 @@ function Rockets() {
   const rocketsList = useSelector((state) => state.rockets);
   useEffect(() => {
     dispatch(rocketsThunk());
-  }, []);
+  });
   return (
     <div>
       {rocketsList.map((rocket) => (
