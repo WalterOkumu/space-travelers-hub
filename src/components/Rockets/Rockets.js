@@ -1,17 +1,17 @@
-import React/* , { useEffect } */ from 'react';
-/* import { useDispatch, useSelector } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import Rocket from './Rocket';
-import { rocketsThunk } from '../redux/rockets'; */
+import { rocketsThunk } from '../redux/rockets';
 
 function Rockets() {
-  /* const dispatch = useDispatch();
-   const rocketsList = useSelector((state) => state.rockets);
+  const dispatch = useDispatch();
+  const rocketsList = useSelector((state) => state.rockets);
   useEffect(() => {
     if (rocketsList.length === 0) dispatch(rocketsThunk());
-  }, [dispatch]); */
+  }, [dispatch]);
   return (
     <div>
-      {/* {rocketsList.map((rocket) => (
+      {rocketsList.map((rocket) => (
         <Rocket
           img={rocket.flickr_images[0]}
           name={rocket.rocket_name}
@@ -21,7 +21,7 @@ function Rockets() {
           reserved={rocket.reserved}
           reservation={rocket.reservation}
         />
-  ))} */}
+      ))}
     </div>
   );
 }

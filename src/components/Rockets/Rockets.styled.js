@@ -4,9 +4,9 @@ export const RocketCard = styles.div`
   max-width: 100vw;
   min-height: 16rem;
   display: flex;
-  padding: 0.5 rem;
+  padding: 1rem;
   margin-bottom: 1rem;
-  align-items: center;
+  align-items: flex-start;
 `;
 
 export const DetailsBlock = styles.div`
@@ -14,17 +14,20 @@ export const DetailsBlock = styles.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
+  font-size: 1.2rem;
 `;
 
 export const ReserveButton = styles.button`
-  width: 8.5rem;
+  min-width: 8.5rem;
   height: 3.25rem;
   color: ${(props) => (props.reserved ? 'gray' : 'white')};
   background-color: ${(props) => (props.reserved ? 'transparent' : '#017BFE')};
   padding: 1rem;
   border: ${(props) => (props.reserved ? '1px solid gray' : 'none')};
   border-radius: 0.3rem;
-  font-size: ${(props) => (props.reserved ? '0.7rem' : '0.9rem')};
+  font-size: ${(props) => (props.reserved ? '0.8rem' : '0.9rem')};
+  white-space: nowrap;
+  align-text: center;
 `;
 
 export const IMG = styles.img`

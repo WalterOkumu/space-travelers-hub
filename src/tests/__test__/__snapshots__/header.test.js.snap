@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Header correctly 1`] = `
+<header
+  className="sc-bcXHqe bHQVRg"
+>
+  <a
+    className="sc-jSUZER djRjPq"
+  >
+    <img
+      className="sc-gKPRtg fXAuue"
+      src="planet.png"
+    />
+    Space Traveler's Hub
+  </a>
+  <nav
+    className="sc-gswNZR bVisuh"
+  >
+    <ul
+      className="sc-dkrFOg iuGBPP"
+    >
+      <li
+        className="sc-hLBbgP jAyBtF"
+      >
+        <a
+          aria-current="page"
+          className="sc-eDvSVe bJtATY ({
+            isActive
+          }) => \`\${isActive ? 'active' : ''}\` active"
+          href="/"
+          onClick={[Function]}
+        >
+          Rockets
+        </a>
+      </li>
+      <li
+        className="sc-hLBbgP jAyBtF"
+      >
+        <a
+          className="sc-eDvSVe bJtATY ({
+            isActive
+          }) => \`\${isActive ? 'active' : ''}\`"
+          href="/missions"
+          onClick={[Function]}
+        >
+          Missions
+        </a>
+      </li>
+      <li
+        className="sc-hLBbgP jAyBtF"
+      >
+        <a
+          className="sc-eDvSVe bJtATY ({
+            isActive
+          }) => \`\${isActive ? 'active' : ''}\`"
+          href="/my-profile"
+          onClick={[Function]}
+        >
+          My Profile
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
+`;

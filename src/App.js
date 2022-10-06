@@ -1,9 +1,9 @@
 import React from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
-import Header from './components/Header';
+import Header from './components/Header/index';
 import Rockets from './components/Rockets/Rockets';
 import Missions from './components/Missions';
-import Profile from './components/Profile';
+import Profile from './components/Profile/Profile';
 
 const App = () => (
   <>

@@ -1,6 +1,6 @@
 import React from 'react';
-/* import { useDispatch } from 'react-redux';
-import { reserve } from '../redux/rockets'; */
+import { useDispatch } from 'react-redux';
+import { reserve } from '../redux/rockets';
 import {
   RocketCard,
   ReserveButton,
@@ -9,29 +9,29 @@ import {
   Badge,
 } from './Rockets.styled';
 
-function Rocket(/* {
+function Rocket({
   img,
   name,
   description,
   id,
   reserved,
   reservation,
-} */) {
-  /*  const dispatch = useDispatch();
+}) {
+  const dispatch = useDispatch();
   const handleClick = () => {
     dispatch(reserve(id));
-  }; */
+  };
   return (
     <RocketCard>
-      <IMG alt="Rocket Image" />
+      <IMG src={img} alt="Rocket Image" />
       <DetailsBlock>
-        <h2>{/* {name} */}</h2>
+        <h2>{name}</h2>
         <p>
-          <Badge>Reserved</Badge>
-          {/* {description} */}
+          <Badge reserved={reserved}>Reserved</Badge>
+          {description}
         </p>
-        <ReserveButton type="button">
-          {/* {reservation} */}
+        <ReserveButton type="button" onClick={handleClick} reserved={reserved}>
+          {reservation}
         </ReserveButton>
       </DetailsBlock>
     </RocketCard>
