@@ -47,6 +47,15 @@ const missionsSlice = createSlice({
         };
       }),
     }),
+
+    reservedMissions: ({ missions }) => ({
+      reservations: missions.map((mission) => {
+        if (mission.reserved === true) {
+          return mission;
+        }
+        return { ...mission };
+      }),
+    }),
   },
   extraReducers(builder) {
     builder
@@ -60,9 +69,6 @@ const missionsSlice = createSlice({
   },
 });
 
-export const getAllMissions = (state) => state.missions.missions;
-export const getStatus = (state) => state.missions.loading;
-
-export const { toggleMission } = missionsSlice.actions;
+export const { toggleMission, reservedMissions } = missionsSlice.actions;
 
 export default missionsSlice.reducer;

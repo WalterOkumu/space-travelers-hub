@@ -1,16 +1,18 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { getAllMissions, loadMissions, toggleMission } from '../../redux/missions';
+import { loadMissions, toggleMission } from '../../redux/missions';
 import './Missions.styles.scss';
 
 const Missions = () => {
   const dispatch = useDispatch();
 
-  const missions = useSelector(getAllMissions);
+  const missions = useSelector((state) => state.missions.missions);
 
   useEffect(() => {
-    dispatch(loadMissions());
+    if (missions.length === 0) {
+      dispatch(loadMissions());
+    }
   }, []);
 
   const renderTableRows = () => (
@@ -33,27 +35,15 @@ const Missions = () => {
             </td>
             <td>
               <div className="button-container">
-                {
-                  mission.reserved
-                    ? (
-                      <button
-                        type="button"
-                        className={`mission-button-${mission.reserved ? 'leave' : 'join'} `}
-                        onClick={() => dispatch(toggleMission(mission.id))}
-                      >
-                        Leave Mission
-                      </button>
-                    )
-                    : (
-                      <button
-                        type="button"
-                        className={`mission-button-${mission.reserved ? 'leave' : 'join'} `}
-                        onClick={() => dispatch(toggleMission(mission.id))}
-                      >
-                        Join Mission
-                      </button>
-                    )
-                }
+                <button
+                  type="button"
+                  className={`mission-button-${mission.reserved ? 'leave' : 'join'} `}
+                  onClick={() => dispatch(toggleMission(mission.id))}
+                >
+                  {
+                    mission.reserved ? 'Leave Mission' : 'Join Mission'
+                  }
+                </button>
               </div>
             </td>
           </tr>
