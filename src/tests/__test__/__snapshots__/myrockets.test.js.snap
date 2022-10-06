@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders MyRockets correctly 1`] = `
+<div>
+  <h2>
+    My Rockets
+  </h2>
+</div>
+`;

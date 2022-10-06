@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { loadMissions, toggleMission } from '../../redux/missions';
+import { loadMissions, toggleMission } from '../redux/missions';
 import './Missions.styles.scss';
 
 const Missions = () => {
