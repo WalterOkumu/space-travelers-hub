@@ -7,8 +7,9 @@ function Rockets() {
   const dispatch = useDispatch();
   const rocketsList = useSelector((state) => state.rockets);
   useEffect(() => {
-    dispatch(rocketsThunk());
-  });
+    if (rocketsList.length === 0) dispatch(rocketsThunk());
+    // eslint-disable-next-line
+  }, []);
   return (
     <div>
       {rocketsList.map((rocket) => (
