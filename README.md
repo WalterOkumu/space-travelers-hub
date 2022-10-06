@@ -12,7 +12,7 @@ In this task, you will be working with the real live data from the SpaceX API. Y
 
 ## Demo
 
-- You can view the demo link here - [Demo Link]()
+- You can view the demo link here - [Demo Link](https://okumus-space-travelers-hub.netlify.app/)
 
 ## Getting Started
 
@@ -30,6 +30,11 @@ In this task, you will be working with the real live data from the SpaceX API. Y
 - GitHub: [@WalterOkumu](https://github.com/WalterOkumu)
 - Twitter: [@OkumuOriaro](https://twitter.com/OkumuOriaro)
 - LinkedIn: [Okumu Oriaro](https://www.linkedin.com/in/okumu-oriaro)
+
+👤 **Moathal Kachi**
+
+- GitHub: [@Moathal](https://github.com/Moathal)
+- Twitter: [@mo_athal](https://twitter.com/mo_athal)
 
 ## Show your support
 
