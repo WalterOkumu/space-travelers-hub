@@ -31,6 +31,11 @@ In this task, you will be working with the real live data from the SpaceX API. Y
 - Twitter: [@OkumuOriaro](https://twitter.com/OkumuOriaro)
 - LinkedIn: [Okumu Oriaro](https://www.linkedin.com/in/okumu-oriaro)
 
+👤 **Moathal Kachi**
+
+- GitHub: [@Moathal](https://github.com/Moathal)
+- Twitter: [@mo_athal](https://twitter.com/mo_athal)
+
 ## Show your support
 
 Give a ⭐️ if you like this project!

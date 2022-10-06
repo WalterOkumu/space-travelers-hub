@@ -4,7 +4,9 @@ import MyRocket from './MyRocket';
 
 function MyRockets() {
   const rockets = useSelector((state) => state.rockets);
+
   const reservedRockets = rockets.filter((rocket) => rocket.reserved === true);
+
   return (
     <div>
       <h2>My Rockets</h2>
